@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="/style.css">
+
 <body>
     <table style="width: 100%">
         <thead>
@@ -15,6 +16,7 @@
                 <th>Company Name</th>
                 <th>Contact Name</th>
                 <th>Delete</th>
+                <th>Update</th>
             </tr>
         </thead>
         <tbody id="tbodyid">
@@ -23,9 +25,23 @@
             </tr>
         </tbody>
     </table>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">x</span>
+            <h2>Update</h2>
+            <label for="compName">Company name:
+                <input type="text" id="compName" name="compName"></label>
+            <label for="contName">Contact name:
+                <input type="text" id="contName" name="contName"></label>
+            <label for="id">
+                <input type="text" id="idObj" name="idObj" style="display: none;"></label>
+            <button id="realUpdate">Update</button>
+        </div>
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="instance.js"></script>
 <script src="script3.js"></script>
+
 </html>

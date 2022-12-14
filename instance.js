@@ -2,7 +2,7 @@ const BASE_URL = 'https://northwind.vercel.app/api';
 
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
-    timeout: 1000
+    timeout: 3000
 });
 
 const network = {
@@ -50,6 +50,15 @@ const network = {
         let response = {};
         await axiosInstance.delete(`${url}/${id}`)
             .then(res => {
+                response = res.data;
+            })
+        return response;
+    },
+
+    put: async (url, id, data) =>{
+        let response= {};
+        await axiosInstance.put(`${url}/${id}`, data)
+            .then(res=> {
                 response = res.data;
             })
         return response;
