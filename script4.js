@@ -8,7 +8,13 @@ function getOrders() {
         .then(data => {
             console.log(data);
             let timeArr = data.sort((a, b) => {
-                a.orderDate.localeCompare(b.orderDate);
+                if ( a. orderDate < b.orderDate){
+                    return -1;
+                }
+                if (a.orderDate> b.orderDate) {
+                    return 1;
+                }
+                return 0;
            
             })
             console.log(timeArr);

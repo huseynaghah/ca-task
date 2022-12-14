@@ -28,7 +28,7 @@ function getCustomers() {
             // })
 
             let alpArr = data.sort((a, b) => {
-                a.companyName.localeCompare(b.companyName);
+               return a.companyName.localeCompare(b.companyName);
             })
 
 
